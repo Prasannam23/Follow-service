@@ -46,7 +46,7 @@ export const followController = {
     });
   }),
 
-  getAllUsers: asyncHandler(async (_req: Request, res: Response): Promise<void> => {
+  getAllUsers: asyncHandler(async (req: Request, res: Response): Promise<void> => {
     try {
       const users = await followService.getAllUsers();
       res.status(200).json({

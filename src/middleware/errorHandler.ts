@@ -3,9 +3,9 @@ import { AppError } from './../utils/errors';
 
 export const errorHandler = (
   err: Error | AppError,
-  _req: Request,
+  req: Request,
   res: Response,
-  _next: NextFunction
+  next: NextFunction
 ): Response => {
   try {
     const serialized = JSON.stringify(err, Object.getOwnPropertyNames(err), 2);
