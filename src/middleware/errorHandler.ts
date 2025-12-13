@@ -5,7 +5,7 @@ export const errorHandler = (
   err: Error | AppError,
   req: Request,
   res: Response,
-  next: NextFunction
+  _next: NextFunction
 ): Response => {
   try {
     const serialized = JSON.stringify(err, Object.getOwnPropertyNames(err), 2);

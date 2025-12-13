@@ -1,5 +1,5 @@
 import prisma from '../db/prisma';
-import { AppError, ErrorCodes, createError } from '../utils/errors';
+import { ErrorCodes, createError } from '../utils/errors';
 import type { FollowRequest, Pagination } from '../utils/validators';
 
 export class FollowService {
