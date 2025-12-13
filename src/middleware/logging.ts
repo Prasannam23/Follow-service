@@ -8,7 +8,7 @@ export const loggingMiddleware = (
   const start = Date.now();
   const originalSend = res.send;
 
-  res.send = function (data: any) {
+  res.send = function (data: string | object | Buffer) {
     const duration = Date.now() - start;
     console.log(
       `[${new Date().toISOString()}] ${req.method} ${req.path} - ${res.statusCode} - ${duration}ms`
